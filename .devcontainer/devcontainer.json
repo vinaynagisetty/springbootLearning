@@ -1,8 +1,12 @@
 {
+    "name": "Java 23 Project",
     "image": "mcr.microsoft.com/devcontainers/java:1-23-bullseye",
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
-            "version": "23"
+            "version": "23",
+            "installMaven": true,
+            "installGradle": false
         }
-    }
+    },
+    "postCreateCommand": "java -version && javac -version"
 }
